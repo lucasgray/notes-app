@@ -15,7 +15,7 @@ build
 # other
 dist
 build
-swagger.json
+**/swagger.json
 
 # misc
 .DS_Store
