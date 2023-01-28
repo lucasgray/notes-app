@@ -15,8 +15,10 @@ build
 # other
 dist
 build
-**/swagger.json
 
+#generated
+**/swagger.json
+packages/client/client
 # misc
 .DS_Store
 *.pem
