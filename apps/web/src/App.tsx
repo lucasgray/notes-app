@@ -9,9 +9,14 @@ function App() {
 
   useEffect(() => {
     fetch('http://localhost:5000/notes')
-      .then((response) => response.json())
+      .then((response) => {
+        console.log(response)
+        return response.json()
+      })
       .then(({ data }) => setData(data))
   }, [])
+
+  console.log(data)
 
   return (
     <div className="App">
