@@ -98,12 +98,10 @@ importers:
 
   packages/client:
     specifiers:
-      api: workspace:*
       openapi-typescript-codegen: ^0.23.0
       tsconfig: workspace:*
       typescript: ^4.5.4
     devDependencies:
-      api: link:../../apps/api
       openapi-typescript-codegen: 0.23.0
       tsconfig: link:../tsconfig
       typescript: 4.9.4
