@@ -8,6 +8,9 @@ interface Props {
   onEdit: (newMessage: string) => void;
 }
 
+/**
+ * Display a note with a nice rounded dropshadow, with actions to delete (edit was stubbed but left as a TODO)
+ */
 const NoteCard: React.FC<Props> = ({ note, onDelete, onEdit }) => {
   return (
     <div className={'w-full rounded overflow-hidden shadow-lg bg-white p-4 mb-4'}>

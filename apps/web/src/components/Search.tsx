@@ -6,6 +6,9 @@ interface Props {
   onSearch: (searchToken: string) => void;
 }
 
+/**
+ * A simple Card that searches notes that match a given query
+ */
 const Search: React.FC<Props> = ({ onClear, onSearch }) => {
   const [searchToken, setSearchToken] = useState<string>('');
 

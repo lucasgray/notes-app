@@ -1,6 +1,11 @@
 import _ from 'lodash';
 import Model from 'types/src/Model';
 
+/**
+ * A basic "in memory" DAO used for scaffolding testing apis.
+ *
+ * We use a list as a backing store and provide simple CRUD.
+ */
 export default class InMemoryDao<T extends Model> {
   protected data: T[];
 

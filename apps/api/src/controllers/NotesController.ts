@@ -2,6 +2,9 @@ import { Body, Controller, Delete, Get, Path, Post, Put, Query, Route } from 'ts
 import Note, { UnsavedNote } from 'types/src/Note';
 import { notesDao } from '../daos';
 
+/**
+ * A controller to provide simple REST against a Note model.
+ */
 @Route('notes')
 export class NotesController extends Controller {
   @Get()

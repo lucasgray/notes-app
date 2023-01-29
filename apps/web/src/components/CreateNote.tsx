@@ -5,7 +5,10 @@ interface Props {
   onCreate: (note: string) => void;
 }
 
-const Search: React.FC<Props> = ({ onCreate }) => {
+/**
+ * A simple Card that allows note creation
+ */
+const CreateNote: React.FC<Props> = ({ onCreate }) => {
   const [note, setNote] = useState<string>('');
   const [showValidation, setShowValidation] = useState<boolean>();
 
@@ -56,4 +59,4 @@ const Search: React.FC<Props> = ({ onCreate }) => {
   );
 };
 
-export default Search;
+export default CreateNote;
