@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
     "dev": "ts-node src/app.ts",
-    "clean": "rm -rf build && rm -rf dist",
+    "clean": "rm -rf build && rm -rf dist && rm -rf public/swagger.json",
     "generate": "tsoa spec-and-routes",
     "build": "tsc"
   },

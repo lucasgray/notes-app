@@ -10,7 +10,7 @@ interface Props {
 
 const NoteCard: React.FC<Props> = ({ note, onDelete, onEdit }) => {
   return (
-    <div className={'w-200 rounded overflow-hidden shadow-lg bg-white p-4 mb-4'}>
+    <div className={'w-full rounded overflow-hidden shadow-lg bg-white p-4 mb-4'}>
       <div className={'divide-y divide-dashed'}>
         <p className={'text-gray-700 pb-2'}>{note.message}</p>
         <div className={'flex justify-end pt-2 gap-2'}>

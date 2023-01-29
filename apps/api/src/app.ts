@@ -6,7 +6,7 @@ import express, {
   Response as ExResponse,
   urlencoded,
 } from 'express';
-import { RegisterRoutes } from '../build/routes';
+import { RegisterRoutes } from '../dist/routes';
 import * as swaggerUi from 'swagger-ui-express';
 
 import { ValidateError } from 'tsoa';

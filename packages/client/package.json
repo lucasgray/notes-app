@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "openapi --input ../../apps/api/public/swagger.json --output ./client --name NotesClient && tsc",
-    "clean": "rm -rf ./client",
+    "generate": "openapi --input ../../apps/api/public/swagger.json --output ./client --name NotesClient",
+    "build": "tsc",
+    "clean": "rm -rf ./client && rm -rf ./turbo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -6,7 +6,7 @@
     },
     "build": {
       "outputs": ["build/**", "dist/**"],
-      "dependsOn": ["^build"]
+      "dependsOn": ["generate", "^build"]
     },
     "test": {
       "outputs": ["coverage/**"],
@@ -19,6 +19,9 @@
     },
     "clean": {
       "cache": false
+    },
+    "client#generate": {
+      "dependsOn": ["api#generate"]
     }
   }
 }
