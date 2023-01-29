@@ -6,8 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "TIMING=1 eslint \"src/**/*.ts*\"",
     "dev": "ts-node src/app.ts",
-    "clean": "rm -rf build",
-    "build": "tsoa spec-and-routes && tsc"
+    "clean": "rm -rf build && rm -rf dist",
+    "generate": "tsoa spec-and-routes",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
