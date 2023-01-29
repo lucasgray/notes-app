@@ -6,7 +6,7 @@ import Search from './components/Search';
 import CreateNote from './components/CreateNote';
 
 const notesClient = new NotesClient({
-  BASE: 'https://notes-backend-30ds.onrender.com',
+  BASE: process.env.API_URL || "http://localhost:5000",
 });
 
 function App() {
