@@ -8,7 +8,7 @@ View the swagger codegen api documentation at https://notes-backend-30ds.onrende
 
 ## Technologies used
 
-* Turborepo
+* [Turborepo](https://turbo.build/)
 * Typescript
 * Create-React-App
 * Tailwind CSS
