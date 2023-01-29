@@ -6,7 +6,9 @@ interface Props {
 }
 
 /**
- * A simple Card that allows note creation
+ * A simple Card that allows note creation.
+ *
+ * Note that the bespoke validation isn't ideal but fine for a single use case
  */
 const CreateNote: React.FC<Props> = ({ onCreate }) => {
   const [note, setNote] = useState<string>('');
