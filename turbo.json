@@ -2,11 +2,16 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "generate": {
-      "outputs": ["build/**", "dist/**", "client/**"]
+      "dependsOn": ["^generate"],
+      "outputs": ["build/**", "dist/**", "client/**", "public/**"]
     },
     "client#generate": {
       "dependsOn": ["api#generate"],
       "outputs": ["build/**", "dist/**", "client/**"]
+    },
+    "client#build": {
+      "dependsOn": ["generate"],
+      "outputs": ["client/**"]
     },
     "build": {
       "outputs": ["build/**", "dist/**"],
