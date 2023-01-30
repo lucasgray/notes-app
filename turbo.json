@@ -3,11 +3,11 @@
   "pipeline": {
     "generate": {
       "dependsOn": ["^generate"],
-      "outputs": ["build/**", "dist/**", "client/**", "public/**"]
+      "outputs": ["client/**", "public/**"]
     },
     "client#generate": {
       "dependsOn": ["api#generate"],
-      "outputs": ["build/**", "dist/**", "client/**"]
+      "outputs": ["client/**"]
     },
     "client#build": {
       "dependsOn": ["generate"],
