@@ -2,7 +2,16 @@
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
     "generate": {
-      "cache": false
+      "dependsOn": ["^generate"],
+      "outputs": ["client/**", "public/**"]
+    },
+    "client#generate": {
+      "dependsOn": ["api#generate"],
+      "outputs": ["client/**"]
+    },
+    "client#build": {
+      "dependsOn": ["generate"],
+      "outputs": ["client/**"]
     },
     "build": {
       "outputs": ["build/**", "dist/**"],
@@ -19,9 +28,6 @@
     },
     "clean": {
       "cache": false
-    },
-    "client#generate": {
-      "dependsOn": ["api#generate"]
     }
   }
 }
