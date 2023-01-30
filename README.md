@@ -32,8 +32,8 @@ Read the readmes in those paths for more info on each project.
 Run locally using:
 
 ```sh
-pnpm install
-turbo clean && turbo build --no-cache && turbo dev
+pnpm install && turbo build
+turbo dev
 ```
 
 
