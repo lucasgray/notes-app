@@ -18,7 +18,7 @@ const CreateNote: React.FC<Props> = ({ onCreate }) => {
   const noteTooLong = (note: string) => note.length >= 300;
 
   return (
-    <div className='w-full rounded overflow-hidden shadow-lg bg-white p-4 mb-4 self-start flex flex-col gap-2'>
+    <div className='mb-4 flex w-full flex-col gap-2 self-start overflow-hidden rounded bg-white p-4 shadow-lg'>
       <h2 className={'text-3xl font-bold tracking-tight text-gray-900'}>Create New Note</h2>
       <form
         onSubmit={(e) => {
@@ -28,7 +28,7 @@ const CreateNote: React.FC<Props> = ({ onCreate }) => {
         <textarea
           id='message'
           rows={4}
-          className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500'
+          className='block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500'
           placeholder='Start typing... '
           value={note}
           onChange={(v) => setNote(v.target.value)}
@@ -39,7 +39,7 @@ const CreateNote: React.FC<Props> = ({ onCreate }) => {
             {noteTooLong(note) ? ' long' : ' short'}.
           </p>
         )}
-        <div className={'flex justify-end pt-2 gap-2'}>
+        <div className={'flex justify-end gap-2 pt-2'}>
           <Button
             label={'Create'}
             color={'blue'}

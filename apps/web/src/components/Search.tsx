@@ -15,7 +15,7 @@ const Search: React.FC<Props> = ({ onClear, onSearch }) => {
   const searchDisabled = !searchToken || searchToken.length < 3 || searchToken.length >= 30;
 
   return (
-    <div className='w-full rounded overflow-hidden shadow-lg bg-white p-4 mb-4 self-start flex flex-col gap-2'>
+    <div className='mb-4 flex w-full flex-col gap-2 self-start overflow-hidden rounded bg-white p-4 shadow-lg'>
       <h2 className={'text-3xl font-bold tracking-tight text-gray-900'}>Search</h2>
       <form
         onSubmit={(e) => {
@@ -24,14 +24,14 @@ const Search: React.FC<Props> = ({ onClear, onSearch }) => {
       >
         <input
           type='text'
-          className={`shadow appearance-none border ${
+          className={`appearance-none border shadow ${
             searchDisabled ? 'border-gray-200' : 'border-blue-500'
-          } rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
+          } focus:shadow-outline w-full rounded py-2 px-3 leading-tight text-gray-700 focus:outline-none`}
           placeholder='Enter search...'
           value={searchToken}
           onChange={(v) => setSearchToken(v.target.value)}
         />
-        <div className={'flex justify-end pt-2 gap-2'}>
+        <div className={'flex justify-end gap-2 pt-2'}>
           <Button
             label={'Clear'}
             color={'blue'}

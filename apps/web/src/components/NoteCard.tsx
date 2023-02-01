@@ -13,10 +13,10 @@ interface Props {
  */
 const NoteCard: React.FC<Props> = ({ note, onDelete, onEdit }) => {
   return (
-    <div className={'w-full rounded overflow-hidden shadow-lg bg-white p-4 mb-4'}>
+    <div className={'mb-4 w-full overflow-hidden rounded bg-white p-4 shadow-lg'}>
       <div className={'divide-y divide-dashed'}>
-        <p className={'text-gray-700 pb-2'}>{note.message}</p>
-        <div className={'flex justify-end pt-2 gap-2'}>
+        <p className={'pb-2 text-gray-700'}>{note.message}</p>
+        <div className={'flex justify-end gap-2 pt-2'}>
           {/*<Button color={"blue"} label={"Edit"} onClick={() => null}/>*/}
           <Button color={'red'} label={'Delete'} onClick={() => onDelete(note.id!!)} />
         </div>

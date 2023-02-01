@@ -10,7 +10,7 @@ const colorVariants: { [s: string]: string } = {
 const Button: React.FC<Props> = ({ color, label, onClick, disabled, ...rest }) => (
   <button
     disabled={disabled}
-    className={`${colorVariants[color]} text-white font-bold py-2 px-4 border rounded cursor-pointer`}
+    className={`${colorVariants[color]} cursor-pointer rounded border py-2 px-4 font-bold text-white`}
     onClick={(e) => {
       e.preventDefault();
       !!onClick && onClick(e);
